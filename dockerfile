@@ -21,5 +21,6 @@ RUN apt-get install git -y\
     vim \
     build-essential \
 	make
-ADD start_test.sh ./tmp/
-#docker build -t memory-test .
+
+WORKDIR /tmp
+ADD start_test.sh ./
