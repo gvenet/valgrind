@@ -10,7 +10,7 @@ fi
 brew install docker-machine
 docker-machine create --driver virtualbox Char
 docker stop valgrind
-docker build -t valgrind/image .
+docker build -t valgrind/image srcs/.
 docker run --rm -d --name valgrind -ti valgrind/image
 docker cp $1/. valgrind:/tmp/. 
 printf "${c1}============================================================= VALGRIND =============================================================\n
